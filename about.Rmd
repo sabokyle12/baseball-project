@@ -8,3 +8,17 @@ description: |
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+## About Me
+Name: **Kyle Sabo** School: Lane Tech High School Interests: Baseball, Video Games, Piano
+
+## About the Project
+*distill-tutorial*
+
+Preceptor's common saying: "This is data science"  
+-Preceptor
+
+[Kane's Free High School Data Science Bootcamp](https://bootcamp.davidkane.info)
+
+* ### Make good looking graphs
+* Try to prove a point with my data
+  + I plan to show how speed is useful for hitting in baseball

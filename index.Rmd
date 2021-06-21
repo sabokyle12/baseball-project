@@ -12,6 +12,7 @@ library(ggthemes)
 
 ```
 
+
 ```{r car-plot}
 mtcars %>%
   select(mpg, wt) %>%
