@@ -1,0 +1,23 @@
+---
+title: "The Data"
+description: |
+  Showing the data used for this project
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(gt)
+library(rmarkdown)
+```
+
+The data I used came from [baseballsavant](https://baseballsavant.mlb.com/), which records a lot of baseball data such has how [fast a player runs](https://baseballsavant.mlb.com/leaderboard/sprint_speed) and how [hard they hit the ball](https://baseballsavant.mlb.com/leaderboard/expected_statistics). One of the stats that they have is expected batting average (xBA), which tries to determine their batting average based on how hard they hit the ball. When subtracted from their actual batting average, you can figure out whether they are over performing or under performing in a stat called xBA difference.  I used this and their sprint speed to help determine the question I am trying to answer.
+
+
+After downloading the data, I combined both data sets into one csv file for each year, which the data for 2015 is shown below. I used the player ids of each player to be able to recognize which rows should be combined to get the proper data.
+
+
+```{r}
+paged_table(read.csv("combined2015"))
+```
+

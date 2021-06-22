@@ -1,12 +1,17 @@
 name: "."
-title: "My Final Project"
+title: "Baseball Project"
 description: |
-  My Final Project
+  How sprint speed affects offensive ability in baseball
 output_dir: "docs"
 navbar:
-  right:
-    - text: "Home"
-      href: index.html
+  left:
     - text: "About"
-      href: about.html
+      href: index.html
+    - text: "Data"
+      href: data.html
+    - text: "Graphs"
+      href: graphs.html
+    - text: "Sources"
+      href: sources.html
+      
 output: distill::distill_article

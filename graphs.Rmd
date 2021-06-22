@@ -1,0 +1,54 @@
+---
+title: "The Graphs"
+description: |
+  What this data reveals about sprint speed affecting offensive ability.
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+```
+
+
+
+```{r total-data}
+totalData <- read.csv("combined15-21")
+ggplot(data = totalData, 
+       mapping = aes(x = sprint_speed, y = ba_diff)) +
+  geom_point(alpha = 0.2, color = "purple") +
+  geom_smooth(method = "lm", formula = "y ~ x", color = "red", se = FALSE) +
+  labs(title = "2015-2021 Sprint Speed vs xBA difference",
+       subtitle = "The faster a player is, the more likely they outperform\ntheir 'expected' hitting, which can be 0.",
+       x = "Sprint Speed (m/s)",
+       y = "xBA difference (positive means they 'overperformed')",
+       caption = "Source: baseballsavant.mlb.com")
+```
+
+Although this looks like a strong correlation, looking at the data more closely, there is a difference between the 2015-2019 data and the 2020-2021 data. This is a result of the website the data was taken from including the speed of the player when taking into account their expected batting average.
+
+```{r split-data}
+ggplot(data = totalData, 
+       mapping = aes(x = sprint_speed, y = ba_diff, color = year)) +
+  geom_point(alpha = 0.2) +
+  geom_smooth(method = "lm", formula = "y ~ x", color = "red", se = FALSE) +
+  facet_wrap(~year) +
+  labs(title = "2015-2021 Sprint Speed vs xBA difference",
+       subtitle = "The faster a player was when xwOBA did not account for speed, the more likely they outperform\ntheir 'expected' hitting. However, it is now adjusted and is about equal for all speeds, although\nfaster players still may outperform more often.",
+       x = "Sprint Speed (m/s)",
+       y = "xBA difference (positive means they 'overperformed')",
+       caption = "Source: baseballsavant.mlb.com")
+ggplot(data = totalData, 
+       mapping = aes(x = sprint_speed, y = slg_diff, color = year)) +
+  geom_point(alpha = 0.2) +
+  geom_smooth(method = "lm", formula = "y ~ x", color = "red", se = FALSE) +
+  facet_wrap(~year) +
+  labs(title = "2015-2021 Sprint Speed vs xSLG difference",
+       subtitle = "Slugging shows the same relation as average did.",
+       x = "Sprint Speed (m/s)",
+       y = "xSLG difference (positive means they 'overperformed')",
+       caption = "Source: baseballsavant.mlb.com")
+```
+
+
+
