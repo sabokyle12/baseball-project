@@ -1,5 +1,5 @@
 ---
-title: "sources"
+title: "Sources"
 description: |
   An overview of sources used in my project.
 site: distill::distill_website
