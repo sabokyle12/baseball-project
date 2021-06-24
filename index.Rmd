@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## What I am Trying to Accomplish
-In this project, I want to find how strongly speed affects the offensive ability of a player. Although stolen bases can be one way to improve offensive ability with speed, I want to focus on how they can get more hits.
+In baseball, it is known that speed can help offensive ability, such as through stolen bases or beating ground balls. However, it is not fully known by how much. This project will attempt to find how strongly speed affects the offensive ability of a player by getting hits through making graphs.
 
 ## How I can do this
 I am doing this by using stats from [baseballsavant](https://baseballsavant.mlb.com), which tracks the sprint speed of players, how hard they hit the ball, and what their actual batting average is. I can use this data to figure out which players are getting more hits than they should based on how hard they hit the ball and as a result are improving their offensive ability due to their speed.
