@@ -50,5 +50,7 @@ ggplot(data = totalData,
        caption = "Source: baseballsavant.mlb.com")
 ```
 
+We can see that each of the adjusted years look mostly the same and each of the non-adjusted years also look the same as each other.
+
 
 

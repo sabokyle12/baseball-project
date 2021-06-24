@@ -1,7 +1,7 @@
 ---
-title: "Baseball Final Project"
+title: "How sprint speed affects offensive ability in baseball"
 description: |
-  How sprint speed affects offensive ability in baseball
+  Baseball Final Project
 site: distill::distill_website
 ---
 
