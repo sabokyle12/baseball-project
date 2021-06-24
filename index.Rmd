@@ -1,5 +1,5 @@
 ---
-title: "How sprint speed affects offensive ability in baseball"
+title: "How Sprint Speed Affects Offensive Ability in Baseball"
 description: |
   Baseball Final Project
 site: distill::distill_website
