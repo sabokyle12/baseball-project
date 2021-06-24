@@ -52,5 +52,89 @@ ggplot(data = totalData,
 
 We can see that each of the adjusted years look mostly the same and each of the non-adjusted years also look the same as each other.
 
+```{r}
+rawData2021 <- read.csv("combined2021")
+ggplot(data = rawData2021, 
+       mapping = aes(x = sprint_speed, y = ba_diff)) +
+  geom_point(color = "red") +
+  geom_smooth(method = "lm", formula = "y ~ x", color = "red", se = FALSE) +
+  labs(title = "2021 Sprint Speed vs xBA difference",
+       x = "Sprint Speed (m/s)",
+       y = "xBA difference (positive means they overperformed)",
+       caption = "Source: baseballsavant.mlb.com")
+```
+
+```{r}
+rawData2020 <- read.csv("combined2020")
+ggplot(data = rawData2020, 
+       mapping = aes(x = sprint_speed, y = ba_diff)) +
+  geom_point(color = "red") +
+  geom_smooth(method = "lm", formula = "y ~ x", color = "red", se = FALSE) +
+  labs(title = "2020 Sprint Speed vs xBA difference",
+       x = "Sprint Speed (m/s)",
+       y = "xBA difference (positive means they overperformed)",
+       caption = "Source: baseballsavant.mlb.com")
+```
+
+```{r}
+rawData2019 <- read.csv("combined2019")
+ggplot(data = rawData2019, 
+       mapping = aes(x = sprint_speed, y = ba_diff, )) +
+  geom_point(color = "turquoise") +
+  geom_smooth(method = "lm", formula = "y ~ x", color = "red", se = FALSE) +
+  labs(title = "2019 Sprint Speed vs xBA difference",
+       x = "Sprint Speed (m/s)",
+       y = "xBA difference (positive means they overperformed)",
+       caption = "Source: baseballsavant.mlb.com")
+```
+
+```{r}
+rawData2018 <- read.csv("combined2018")
+ggplot(data = rawData2018, 
+       mapping = aes(x = sprint_speed, y = ba_diff, )) +
+  geom_point(color = "turquoise") +
+  geom_smooth(method = "lm", formula = "y ~ x", color = "red", se = FALSE) +
+  labs(title = "2018 Sprint Speed vs xBA difference",
+       x = "Sprint Speed (m/s)",
+       y = "xBA difference (positive means they overperformed)",
+       caption = "Source: baseballsavant.mlb.com")
+```
+
+```{r}
+rawData2017 <- read.csv("combined2017")
+ggplot(data = rawData2017, 
+       mapping = aes(x = sprint_speed, y = ba_diff, )) +
+  geom_point(color = "turquoise") +
+  geom_smooth(method = "lm", formula = "y ~ x", color = "red", se = FALSE) +
+  labs(title = "2017 Sprint Speed vs xBA difference",
+       x = "Sprint Speed (m/s)",
+       y = "xBA difference (positive means they overperformed)",
+       caption = "Source: baseballsavant.mlb.com")
+```
+
+```{r}
+rawData2016 <- read.csv("combined2016")
+ggplot(data = rawData2016, 
+       mapping = aes(x = sprint_speed, y = ba_diff, )) +
+  geom_point(color = "turquoise") +
+  geom_smooth(method = "lm", formula = "y ~ x", color = "red", se = FALSE) +
+  labs(title = "2016 Sprint Speed vs xBA difference",
+       x = "Sprint Speed (m/s)",
+       y = "xBA difference (positive means they overperformed)",
+       caption = "Source: baseballsavant.mlb.com")
+```
+
+```{r}
+rawData2015 <- read.csv("combined2015")
+ggplot(data = rawData2015, 
+       mapping = aes(x = sprint_speed, y = ba_diff, )) +
+  geom_point(color = "turquoise") +
+  geom_smooth(method = "lm", formula = "y ~ x", color = "red", se = FALSE) +
+  labs(title = "2015 Sprint Speed vs xBA difference",
+       x = "Sprint Speed (m/s)",
+       y = "xBA difference (positive means they overperformed)",
+       caption = "Source: baseballsavant.mlb.com")
+```
 
 
+Looking at these graphs, it can be seen that before xBA was adjusted to speed, a player with very high speed (30m/s) can get a batting average of about 0.025 higher than a player with very low speed (23m/s). Although this might seem like a pretty small number, a slow player with a good average of 0.275 can become one of the best in the game at getting hits if they are faster. These graphs prove that being faster can help improve a player's ability to get hits by a significant amount.
